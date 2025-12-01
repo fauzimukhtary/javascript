@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fauzi's Webpage</title>
+    <script type="module" src="./scripts/library.mjs"></script>
+  </head>
+  <body>
+    <script type="module">
+      import traject from "./scripts/library.mjs"; // Import Default
+      import totalin from "./scripts/utility.mjs"; // Import Default
+      import { Hello, hero, counter } from "./scripts/library.mjs"; // Import
+      import * as ObjectModule from "./scripts/aggregate.mjs"; // Import from Agregate
+
+      Hello("Fauzi");
+      Hello(hero);
+      counter();
+      console.log(traject);
+
+      ObjectModule.counter();
+
+      totalin(9, 19);
+
+      import * as Module from "./scripts/library.mjs"; // Module Object & Alias
+      Module.counter();
+    </script>
+  </body>
+</html>

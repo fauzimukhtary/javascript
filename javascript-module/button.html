@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <input type="button" value="Say" id="sayButton" />
+    <script type="module">
+      /**
+       * Dynamic Module Loading
+       */
+      document.getElementById("sayButton").onclick = function () {
+        import("./scripts/button.js").then((module) => {
+          const name = document.getElementById("name").value;
+          module.alertHello(name);
+        });
+      };
+    </script>
+  </body>
+</html>
